@@ -469,145 +469,131 @@ will return group ban list
 
 ]],
 	help_text_super =[[
-SuperGroup Commands:
+ 🌟لیست دستورات سوپر گروه🌟:
 
-!info
-Displays general info about the SuperGroup
+💗(اینفو)💗
+نمایش اطلاعات اصلی گروه
 
-!admins
-Returns SuperGroup admins list
+💗(ادمین ها)💗
+نمایش لیست ادمین های گروه
 
-!owner
-Returns group owner
+💗(مالک)💗
+نمایش خریدار گروه
 
-!modlist
-Returns Moderators list
+💗(لیست مدیران)💗
+نمایش لیست ناظم ها
 
-!bots
-Lists bots in SuperGroup
+💗(ربات ها)💗
+لیست روبات های گروه
 
-!who
-Lists all users in SuperGroup
+💗(ایدی افراد)💗
+لیست اعضای گروه در یک فایل متنی
 
-!block
-Kicks a user from SuperGroup
-*Adds user to blocked list*
+💗(بلاک)💗
+بلاک کردن و کیک کردن فرد
 
-!ban
-Bans user from the SuperGroup
+🌠(ای دی)🌠
+نمایش ایدی گروه
+شما همچنین میتوانید هم با (یوزرنیم)و هم با (ریپلای پیام) ایدی عددی شخصی را بگیرید
 
-!unban
-Unbans user from the SuperGroup
+💞(ایدی این)💞
+نمایش اطلاعات فردی که پیغام رو فوارد کرده
 
-!id
-Return SuperGroup ID or user id
-*For userID's: !id @username or reply !id*
+💞(خروج)💞
+اخراج شدن از سوپر گروه
 
-!id from
-Get ID of user message is forwarded from
+💞(تنظیم مالک)💞
+تنظیم کردن کاربر به عنوان خریدار گروه
 
-!kickme
-Kicks user from SuperGroup
-*Must be unblocked by owner or use join by pm to return*
+🔴(ترفیع) [یوزرنیم][ریپلای پیام][ایدی]
+🔵اضافه کردن کاربر به لیست ناظم ها
 
-!setowner
-Sets the SuperGroup owner
+🔵(تنزل)[یوزرنیم][ایدی]🔴
+پاک کردن کاربر از لیست ناظم ها
 
-!promote [username|id]
-Promote a SuperGroup moderator
+🔵(تنظیم نام)🔴
+گذاشتن اسم گروه
 
-!demote [username|id]
-Demote a SuperGroup moderator
+🔴(تنظیم عکس)🔵
+گذاشتن عکس برای گروه
 
-!setname
-Sets the chat name
+🔴(تنظیم قوانین)🔵
+گذاشتن قوانین برای گروه
 
-!setphoto
-Sets the chat photo
+🔴(تنظیم توضیحات)🔵
+گذاشتن متن درباره برای سوپر گروه(این متن در بخش توضیحات گروه هم نمایش داده میشه)
 
-!setrules
-Sets the chat rules
+🔴(ذخیره)[متن]🔵
+ذخیره کردن یک متن
 
-!setabout
-Sets the about section in chat info(members list)
+🔴(گرفتن)[متن]🔵
+گرفتن متن
 
-!save [value] <text>
-Sets extra info for chat
+🔴(لینک جدید)🔵
+ساختن لینک جدید
 
-!get [value]
-Retrieves extra info for chat by value
+🔵(لینک)🔴
+گرفتن لینک
 
-!newlink
-Generates a new group link
+🔵(قوانین)🔴
+نمایش قوانین
 
-!link
-Retireives the group link
+🔴(تبدیل) ff🔵
+تبدیل حروف با کلمه انگلیسی به عکس
 
-!rules
-Retrieves the chat rules
+💠قفل [لینک][اتک][اسپم][عربی][ورود][rtl][استیکر][محکم]💠
 
-!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-Lock group settings
-*rtl: Delete msg if Right To Left Char. is in name*
-*strict: enable strict settings enforcement (violating user will be kicked)*
+قفل کردن لینک گروها-اسپم-متن و اسم های بزرگ -زبان فارسی-تعداد اعضا-کاراکتر های غیر عادی-استیکر-مخاطبین
+دقت کنید اگر گذینه اخری محکم روشن باشد کاربر از گروه کیک میشود و پیغام پاک میشه در غیر این صورت فقط پیغام پاک میشود
 
-!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-Unlock group settings
-*rtl: Delete msg if Right To Left Char. is in name*
-*strict: disable strict settings enforcement (violating user will not be kicked)*
+💠بازکردن [لینک][اتک][اسپم][عربی][ورود][rtl][استیکر][محکم]💠
 
-!mute [all|audio|gifs|photo|video|service]
-mute group message types
-*A "muted" message type is auto-deleted if posted
+باز کردن قفل امکانات بالا
 
-!unmute [all|audio|gifs|photo|video|service]
-Unmute group message types
-*A "unmuted" message type is not auto-deleted if posted
+💠(بستن)[اهنگ][عکس][گیف][ویدیو][فایل][چت]💠
+پاک کردن سریع همه پیغام هایا چت ها-عکس ها-گیف ها-صدا های ضبط شده و موزیک-ویدیو
 
-!setflood [value]
-Set [value] as flood sensitivity
+💠(ازاد کردن)[اهنگ][عکس][گیف][ویدیو][فایل][چت]💠
+باز کردن قفل امکانات بالا
 
-!settings
-Returns chat settings
+💠(حساسیت)[1_40]💠
+گذاشتن value به عنوان حساسیت اسپم
 
-!muteslist
-Returns mutes for chat
+🌟(تنظیمات)🌟
+نمایش تنظیمات گروه
 
-!muteuser [username]
-Mute a user in chat
-*If a muted user posts a message, the message is deleted automaically
-*only owners can mute | mods and owners can unmute
+🌟(لیست ممنوع)🌟
+نمایش نوع پیغام های سایلنت شده
 
-!mutelist
-Returns list of muted users in chat
+🌟(ممنوع چت) [یورزنیم]🌟
+سایلنت کردن یک کاربر خاص در گروه
+فقط خریدار میتونه کسیو سایلنت کنه ولی ناظم ها میتونند فرد را از سایلنتی در بیاورند
 
-!banlist
-Returns SuperGroup ban list
+🌟(لیست ممنوع)🌟
+نمایش لیست افراد سایلنت شده
 
-!clean [rules|about|modlist|mutelist]
-
-!del
-Deletes a message by reply
-
-!public [yes|no]
-Set chat visibility in pm !chats or !chatlist commands
-
-!res [username]
-Returns users name and id by username
+🌟(حذف)[قوانین][توضیحات][ مدیران][لیست ممنوع]🌟
+پاک کردن لیست ناظم ها یا مدیران-توضیحات-لیست سایلنت شده ها یا لیست ممنوع-قوانین
 
 
-!log
-Returns group logs
-*Search for kick reasons using [#RTL|#spam|#lockmember]
+🌟(عمومی) [yes|no]🌟
+نمایش گروه شما در لیست گروها
+فقط برای ادمین ها و سودو ها
 
-**You can use "#", "!", or "/" to begin all commands
+🌟(ایدی) [یوزرنیم]🌟
+گرفتن اطلاعت یوزر نیم داده شد
 
-*Only owner can add members to SuperGroup
-(use invite link to invite)
-
-*Only moderators and owner can use block, ban, unban, newlink, link, setphoto, setname, lock, unlock, setrules, setabout and settings commands
-
-*Only owner can use res, setowner, promote, demote, and log commands
+🌟!log🌟
+برگرداندن تاریخچه گروه در یک فایل متنی
+•••••••••••••••••••••••
+نیازی نیست از اسلش/مربع/علامت تعجب در اول دستورات استفاده کنید
+•••••••••••••••••••••••
+فقط ادمین ها میتونن اعضا به گروه ادد کنند در سوپر گروه(قانون تلگرام)
+•••••••••••••••••••••••
+فقط ناظم ها و خریدار ها میتوانند دستورات  بالا را اجرا کنند
+•••••••••••••••••••••••
+فقط خریدار گروه میتواند دستورات بالا رو اجرا کند
+•••••••••••••••••••••••
 
 ]],
   }
