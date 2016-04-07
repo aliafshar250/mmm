@@ -1230,7 +1230,7 @@ local function run(msg, matches)
 			local function callback_link (extra , success, result)
 			local receiver = get_receiver(msg)
 				if success == 0 then
-					send_large_msg(receiver, 'ربات سازنده گروه نیست * ش��ا میتوانید با د��تو�� (ذخیره لینک) لینک خود را ثبت کنید')
+					send_large_msg(receiver, 'ربات سازنده گروه نیست*شما میتوانید باستفاده از دستور (ذخیره لینک) لینک گروه خودتان را ثبت کنید')
 					data[tostring(msg.to.id)]['settings']['set_link'] = nil
 					save_data(_config.moderation.data, data)
 				else
