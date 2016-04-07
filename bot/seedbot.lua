@@ -234,7 +234,30 @@ function create_config( )
     },
     sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[king bot v4
+    about_text = [[Teleseed v4
+An advanced administration bot based on TG-CLI written in Lua
+
+https://github.com/SEEDTEAM/TeleSeed
+
+Admins
+@iwals [Founder]
+@imandaneshi [Developer]
+@POTUS [Developer]
+@seyedan25 [Manager]
+@aRandomStranger [Admin]
+
+Special thanks to
+awkward_potato
+Siyanew
+topkecleon
+Vamptacus
+
+Our channels
+@teleseedch [English]
+@iranseed [persian]
+
+Our website 
+http://teleseed.seedteam.org/
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -457,9 +480,6 @@ will return group ban list
 💗(ادمین ها)💗
 نمایش لیست ادمین های گروه
 
-💗(دیلیت)💗
-حذف کردن پیام کسی با ریپلای از گروه
-
 💗(مالک)💗
 نمایش خریدار گروه
 
@@ -478,6 +498,9 @@ will return group ban list
 🌠(ای دی)🌠
 نمایش ایدی گروه
 شما همچنین میتوانید هم با (یوزرنیم)و هم با (ریپلای پیام) ایدی عددی شخصی را بگیرید
+
+💗(دیلیت)💗
+حذف پیام کسی با ریپلای از گروه
 
 💞(ایدی این)💞
 نمایش اطلاعات فردی که پیغام رو فوارد کرده
@@ -558,6 +581,7 @@ will return group ban list
 🌟(حذف)[قوانین][توضیحات][ مدیران][لیست ممنوع]🌟
 پاک کردن لیست ناظم ها یا مدیران-توضیحات-لیست سایلنت شده ها یا لیست ممنوع-قوانین
 
+
 🌟(عمومی) [yes|no]🌟
 نمایش گروه شما در لیست گروها
 فقط برای ادمین ها و سودو ها
@@ -567,7 +591,7 @@ will return group ban list
 
 🌟!log🌟
 برگرداندن تاریخچه گروه در یک فایل متنی
-☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆]],
+☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆ ]],
   }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
