@@ -58,18 +58,18 @@ function run(msg, matches)
 	city = 'تهران'
 	end
 	local lat,lng,url	= get_staticmap(city)
-
 	local dumptime = run_bash('date +%s')
 	local code = http.request('http://api.aladhan.com/timings/'..dumptime..'?latitude='..lat..'&longitude='..lng..'&timezonestring=Asia/Tehran&method=7')
 	local jdat = json:decode(code)
 	local data = jdat.data.timings
 	local text = 'شهر: '..city
-	  text = text..'\nاذان صبح: '..data.Fajr
-	  text = text..'\nطلوع آفتاب: '..data.Sunrise
-	  text = text..'\nاذان ظهر: '..data.Dhuhr
-	  text = text..'\nغروب آفتاب: '..data.Sunset
-	  text = text..'\nاذان مغرب: '..data.Maghrib
-	  text = text..'\nعشاء : '..data.Isha
+	  text = text..'\n\nاذان صبح: '..data.Fajr
+	  text = text..'\n\nطلوع آفتاب: '..data.Sunrise
+	  text = text..'\n\nاذان ظهر: '..data.Dhuhr
+	  text = text..'\n\nغروب آفتاب: '..data.Sunset
+	  text = text..'\n\nاذان مغرب: '..data.Maghrib
+	  text = text..'\n\nعشاء : '..data.Isha
+	  text = texr..'\n\nایدی شما : '..(msg.id or '')..'\n'
 	if string.match(text, '0') then text = string.gsub(text, '0', '۰') end
 	if string.match(text, '1') then text = string.gsub(text, '1', '۱') end
 	if string.match(text, '2') then text = string.gsub(text, '2', '۲') end
