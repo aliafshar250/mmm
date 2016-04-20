@@ -525,6 +525,21 @@ sudo2:@mohammad20162015
 !linkpv
 لینک گروه در پیوی
 
+!links [text]
+کوتاه کردن لینک
+
+!git [text]
+جستجوی ادرس گیت
+
+!tr [text]
+ترجمه هر زبانی به انگلیسی
+
+!sticker [name]
+ساختن استیکر توسط ربات
+
+!sticker reply photo
+تبدیل عکس به استیکر
+
 !rules
 نمایش قوانین
 
