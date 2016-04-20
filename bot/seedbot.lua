@@ -447,6 +447,10 @@ will return group ban list
 	help_text_super =[[
 SuperGroup Commands:
 
+channel:@kingbotpluss
+sudo:@mehdisudo
+sudo2:@mohammad20162015
+
 !info
 نمایش اطلاعات اصلی گروه
 
