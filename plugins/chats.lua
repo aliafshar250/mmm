@@ -9,7 +9,7 @@ local function history(extra, suc, result)
   end
 end
 local function run(msg, matches)
-  if matches[1] == 'rem chat' and is_owner(msg) then
+  if matches[1] == 'remch' and is_owner(msg) then
     if msg.to.type == 'channel' then
       if tonumber(matches[2]) > 10000 or tonumber(matches[2]) < 1 then
         return "تعداد بیشتر از 1 مجاز است"
@@ -25,7 +25,7 @@ end
 
 return {
     patterns = {
-        '^[!/#][rem chat] (%d*)$'
+        '^[!/#][remch] (%d*)$'
     },
     run = run
 }
