@@ -446,10 +446,7 @@ will return group ban list
 ]],
 	help_text_super =[[
 SuperGroup Commands:
-
 channel:@kingbotpluss
-sudo:@mehdisudo
-sudo2:@mohammad20162015
 
 !info
 نمایش اطلاعات اصلی گروه
@@ -528,18 +525,6 @@ sudo2:@mohammad20162015
 !links [text]
 کوتاه کردن لینک
 
-!git [text]
-جستجوی ادرس گیت
-
-!tr [text]
-ترجمه هر زبانی به انگلیسی
-
-!sticker [name]
-ساختن استیکر توسط ربات
-
-!sticker reply photo
-تبدیل عکس به استیکر
-
 !rules
 نمایش قوانین
 
@@ -599,7 +584,8 @@ sudo2:@mohammad20162015
 *Only moderators and owner can use block, ban, unban, newlink, link, setphoto, setname, lock, unlock, setrules, setabout and settings commands
 فقط ناظم ها و خریدار ها میتوانند دستورات  بالا را اجرا کنند
 *Only owner can use res, setowner, promote, demote, and log commands
-فقط خریدار گروه میتواند دستورات بالا رو اجرا کند ]],
+فقط خریدار گروه میتواند دستورات بالا رو اجرا کند 
+]],
   }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
