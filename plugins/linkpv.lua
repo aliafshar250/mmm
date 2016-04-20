@@ -15,7 +15,7 @@ end
 
 return {
   patterns = {
-    "^(لینک شخصی)$"
+    "^(linkpv)$"
   },
   run = run
 }
