@@ -60,9 +60,8 @@ if msg.text == "سیکتیر" then
 	return "سیک اگه تیر داشت ننت الان جانباز بود"
 end
 if msg.text == "کانال" then
-	return "کانال ربات  ربات ما  TEAM CORE BOT
-🔰TEAM CORE ROBOT🔰
-https://telegram.me/TEAM_CORE_BOT"
+	return "کانال ربات  ربات ما King bots
+https://telegram.me/kingbotpluss"
 end
 if msg.text == "عجب" then
 	return "کیر رجب "
@@ -100,7 +99,7 @@ if msg.text == "محمد" then
 if msg.text == "ممد" then
 	return "چیکار داری بابامو؟"
 end
-if msg.text == "@mehdijokers" then
+if msg.text == "@mehdisudo" then
 	return "چیکار داری بابامو؟"
 end
 if msg.text == "@mohammad20162015" then
@@ -140,7 +139,7 @@ return {
     "^[Bb]ot$",
     "^[Bb]ye$",
     "^?$",
-    "^@mehdijokers$",
+    "^@mehdisudo$",
     "^@mohammad20162015$",
     "^mahdi$",
     "^mehdi$",
