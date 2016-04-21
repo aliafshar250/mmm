@@ -1,6 +1,33 @@
 package.path = package.path .. ';.luarocks/share/lua/5.2/?.lua'
   ..';.luarocks/share/lua/5.2/?/init.lua'
-d(receiver, ok_cb, false)
+package.cpath = package.cpath .. ';.luarocks/lib/lua/5.2/?.so'
+
+require("./bot/utils")
+
+local f = assert(io.popen('/usr/bin/git describe --tags', 'r'))
+VERSION = assert(f:read('*a'))
+f:close()
+
+-- This function is called when tg receive a msg
+function on_msg_receive (msg)
+  if not started then
+    return
+  end
+
+  msg = backward_msg_format(msg)
+
+  local receiver = get_receiver(msg)
+  print(receiver)
+  --vardump(msg)
+  --vardump(msg)
+  msg = pre_process_service_msg(msg)
+  if msg_valid(msg) then
+    msg = pre_process_msg(msg)
+    if msg then
+      match_plugins(msg)
+      if redis:get("bot:markread") then
+        if redis:get("bot:markread") == "on" then
+          mark_read(receiver, ok_cb, false)
         end
       end
     end
@@ -205,7 +232,7 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {145173448,137791771},--Sudo users
+    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v4
 An advanced administration bot based on TG-CLI written in Lua
@@ -445,17 +472,13 @@ will return group ban list
 
 ]],
 	help_text_super =[[
-SuperGroup Commands:
-channel:@kingbotpluss
+ĶÌÑĢ BÒŤ SuperGroup Commands:
 
 !info
 نمایش اطلاعات اصلی گروه
 
-!info
+!info 
 نمایش اطلاعات شما
-
-!remch
-حذف کردن تمام پیام های گروه
 
 !admins
 نمایش لیست ادمین های گروه
@@ -520,13 +543,20 @@ channel:@kingbotpluss
 گرفتن لینک
 
 !linkpv
-لینک گروه در پیوی
+لینک در شخصی
 
-!links [text]
+!links {texr}
 کوتاه کردن لینک
 
 !rules
 نمایش قوانین
+
+!google {text}
+سرچ کردن در گوگل
+
+!qr {text} [Color]
+تبدیل متن به استیکر با رنگ
+مورد نظر شما
 
 !lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
 
@@ -564,17 +594,47 @@ channel:@kingbotpluss
 !clean [rules|about|modlist|mutelist]
 پاک کردن لیست ناظم ها-درباره-لیست سایلنت شده ها-قوانین
 
-
 !public [yes|no]
 نمایش گروه شما در لیست گروها
 
 !res [username]
 گرفتن اطلاعت یوزر نیم داده شد
 
-
 !log
 برگرداندن تاریخچه گروه در یک فایل متنی
 
+!time {State}
+نمایش زمان استان مورد نظر
+
+تبدیل {text}
+تبدیل متن به عکس
+
+!gif 
+دریافت گیف
+
+!wikifa {text}
+جستجو در باره چیزی در دانشنامه
+
+!git {name gits}
+جستجوی گیت مورد نظر
+
+!aparat {text}
+جستجوی در اپارات
+
+!azan {text}
+اذان استان مورد نظر
+
+!weather {text}
+نمایش اب و هوای استان مورد نظر
+
+!insta {text}
+جستجو در  اینستاگرام
+
+!mstick {photo}
+تبدیل عکس به استیکر
+
+!mphoto {sticker}
+تبدیل استیکر به عکس
 
 **You can use "#", "!", or "/" to begin all commands
 شما میتوانید هم از اسلش/مربع/علامت تعجب در اول دستورات استفاده کنید
@@ -584,7 +644,11 @@ channel:@kingbotpluss
 *Only moderators and owner can use block, ban, unban, newlink, link, setphoto, setname, lock, unlock, setrules, setabout and settings commands
 فقط ناظم ها و خریدار ها میتوانند دستورات  بالا را اجرا کنند
 *Only owner can use res, setowner, promote, demote, and log commands
-فقط خریدار گروه میتواند دستورات بالا رو اجرا کند 
+فقط خریدار گروه میتواند دستورات بالا را اجرا کنند
+channel king :@kingbotpluss
+sudo kings :@mehdisudo and @mohammad20162015
+version king bot : 3
+
 ]],
   }
   serialize_to_file(config, './data/config.lua')
