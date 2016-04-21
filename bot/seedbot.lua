@@ -542,7 +542,7 @@ will return group ban list
 !link
 گرفتن لینک
 
-!linkpv
+linkpv
 لینک در شخصی
 
 !links {texr}
@@ -603,7 +603,7 @@ will return group ban list
 !log
 برگرداندن تاریخچه گروه در یک فایل متنی
 
-!time {State}
+زمان {State}
 نمایش زمان استان مورد نظر
 
 تبدیل {text}
@@ -635,6 +635,21 @@ will return group ban list
 
 !mphoto {sticker}
 تبدیل استیکر به عکس
+
+!tr en and fa {text}
+ترجمه از انگلیسی en به فارسی fa و بر عکس
+
+بگو {text}
+تکرار حرف شما
+
+!voice {text}
+تلفظ و خواندن روی کلمه انگلیسی
+
+ممه &کون 
+دریافت عکس های +18
+
+!user 
+دریافت عکس و لینک پیوی خودتان
 
 **You can use "#", "!", or "/" to begin all commands
 شما میتوانید هم از اسلش/مربع/علامت تعجب در اول دستورات استفاده کنید
