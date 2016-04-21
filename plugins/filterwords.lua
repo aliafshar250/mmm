@@ -1,12 +1,12 @@
 local function addword(msg, name)
-    local hash = 'chat:'..msg.to.id..':badword'
+    local hash = 'channel:'..msg.to.id..':badword'
     redis:hset(hash, name, 'newword')
     return "کلمه جدید به فیلتر کلمات اضافه شد\n>"..name
 end
 
 local function get_variables_hash(msg)
 
-    return 'chat:'..msg.to.id..':badword'
+    return 'channel:'..msg.to.id..':badword'
 
 end 
 
