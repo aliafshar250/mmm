@@ -4,12 +4,12 @@ local alireza_PT = 159887854 --put your id here(BOT OWNER ID)
 
 local function setrank(msg, name, value) -- setrank function
   local hash = nil
-  if msg.to.type == 'chat' then
+  if msg.to.type == 'channel' then
     hash = 'rank:'..msg.to.id..':variables'
   end
   if hash then
     redis:hset(hash, name, value)
- return send_msg('chat#id'..msg.to.id, 'set Who for ('..name..') To : '..value, ok_cb,  true)
+ return send_msg('channel#id'..msg.to.id, 'set Who for ('..name..') To : '..value, ok_cb,  true)
   end
 end
 
