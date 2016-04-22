@@ -22,6 +22,7 @@ local function check_member_super(cb_extra, success, result)
 		  lock_link = "no",
           flood = 'yes',
 		  lock_spam = 'yes',
+                  lock_tag = 'no',
 		  lock_sticker = 'no',
 		  member = 'no',
 		  public = 'no',
@@ -298,6 +299,37 @@ local function unlock_group_arabic(msg, data, target)
   end
 end
 
+local function lock_group_tag(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  if not is_owner(msg) then
+    return "Owners only!"
+  end
+  local group_tag_lock = data[tostring(target)]['settings']['lock_tag']
+  if group_tag_lock == 'yes' then
+    return 'Tag is already locked'
+  else
+    data[tostring(target)]['settings']['lock_tag'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'Tag has been locked'
+  end
+end
+
+local function unlock_group_tag(msg, data, target)
+  if not is_momod(msg) then
+    return
+  end
+  local group_tag_lock = data[tostring(target)]['settings']['lock_tag']
+  if group_tag_lock == 'no' then
+    return 'Tag is not locked'
+  else
+    data[tostring(target)]['settings']['lock_tag'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'Tag  has been unlocked'
+  end
+end
+  
 local function lock_group_membermod(msg, data, target)
   if not is_momod(msg) then
     return
@@ -565,7 +597,7 @@ end
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "🚨SuperGroup settings🚨:\n🔧Lock links : "..settings.lock_link.."\n🔧Lock flood: "..settings.flood.."\n🔧Flood sensitivity : "..NUM_MSG_MAX.."\n🔧Lock spam: "..settings.lock_spam.."\n🔧Lock Arabic: "..settings.lock_arabic.."\n🔧Lock Member: "..settings.lock_member.."\n🔧Lock RTL: "..settings.lock_rtl.."\n🔧Lock Tgservice : "..settings.lock_tgservice.."\n🔧Lock sticker: "..settings.lock_sticker.."\n🔧Public: "..settings.public.."\n🔧Strict settings: "..settings.strict
+  local text = "🚨SuperGroup settings🚨:\n🔧Lock links : "..settings.lock_link.."\n🔧Lock flood: "..settings.lock_tag.."\n🔧Lock tag: "..settings.flood.."\n🔧Flood sensitivity : "..NUM_MSG_MAX.."\n🔧Lock spam: "..settings.lock_spam.."\n🔧Lock Arabic: "..settings.lock_arabic.."\n🔧Lock Member: "..settings.lock_member.."\n🔧Lock RTL: "..settings.lock_rtl.."\n🔧Lock Tgservice : "..settings.lock_tgservice.."\n🔧Lock sticker: "..settings.lock_sticker.."\n🔧Public: "..settings.public.."\n🔧Strict settings: "..settings.strict
   return text
 end
 
@@ -1658,6 +1690,10 @@ local function run(msg, matches)
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked spam ")
 				return lock_group_spam(msg, data, target)
 			end
+                        if matches[2] == 'tag' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked tag ")
+				return lock_group_tag(msg, data, target)
+			end 
 			if matches[2] == 'flood' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked flood ")
 				return lock_group_flood(msg, data, target)
@@ -1702,6 +1738,10 @@ local function run(msg, matches)
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked spam")
 				return unlock_group_spam(msg, data, target)
 			end
+                        if matches[2] == 'tag' then
+				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked tag")
+				return unlock_group_tag(msg, data, target)
+			end 
 			if matches[2] == 'flood' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked flood")
 				return unlock_group_flood(msg, data, target)
