@@ -54,7 +54,7 @@ function run(msg, matches)
 	redis:incr(hash)
 	local receiver	= get_receiver(msg)
 	local city = matches[1]
-	if matches[1] == 'azan' then
+	if matches[1] == 'اذان' then
 	city = 'tehran'
 	end
 	local lat,lng,url	= get_staticmap(city)
@@ -85,8 +85,8 @@ end
 
 return {
   patterns = {
-    "^!azan (.*)$",
-    "^!azan$",
+    "^(اذان) (.*)$",
+    "^(اذان)$",
     }, 
   run = run 
 }
