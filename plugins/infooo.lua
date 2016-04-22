@@ -193,7 +193,7 @@ local function run(msg, matches)
   	 local um_hash = 'msgs:'..msg.from.id..':'..msg.to.id
 	 user_info_msgs = tonumber(redis:get(um_hash) or 0)
 	 text = text..'تعداد پیام های فرستاده شده : '..user_info_msgs..'\n\n'
-	 if msg.to.type == 'chat' then
+	 if msg.to.type == 'channel' then
 	 text = text..'نام گروه : '..msg.to.title..'\n'
      text = text..'ایدی گروه : '..msg.to.id..'\n'
      text = text..'telegram.me/'..msg.from.username
