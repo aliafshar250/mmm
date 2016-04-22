@@ -509,43 +509,36 @@ will return group ban list
 
 🔧!setowner
 ست کردن کاربر به عنوان خریدار گروه
-
+➿➿➿➿➿➿➿➿➿➿➿➿
 🔧!promote [username|id]
 اضافه کردن کاربر به لیست ناظم ها
-
 🔧!demote [username|id]
 پاک کردن کاربر از لیست ناظم ها
-
+➡➡➡➡➡➡➡➡➡➡➡➡
 🔧!setname
 گذاشتن اسم گروه
-
 🔧!setphoto
 گذاشتن عکس برای گروه
-
 🔧!setrules
 گذاشتن قوانین برای گروه
-
 🔧!setabout
 گذاشتن متن درباره برای سوپر گروه(این متن در بخش توضیحات گروه هم نمایش داده میشه)
-
+⬅⬅⬅⬅
 🆗!save [value] <text>
 ذخیره کردن یک متن
 
 🔯!get [value]
 گرفتن متن
-
+↘↘↘↘↘
 ♻!newlink
 ساختن لینک جدید
-
 🌟!link
 گرفتن لینک
-
 ⭐linkpv
 لینک در شخصی
-
 🔴!links {texr}
 کوتاه کردن لینک
-
+↙↙↙↙↙
 ❎!rules
 نمایش قوانین
 
@@ -554,35 +547,33 @@ will return group ban list
 
 ⬛!qr {text} [Color]
 تبدیل لینک به عکس
+
 🔒!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
 قفل کردن لینک گروها-اسپم-متن و اسم های بزرگ -زبان فارسی-تعداد اعضا-کاراکتر های غیر عادی-استیکر-مخاطبین
 دقت کنید اگر گذینه اخری strict روشن باشد کاربر از گروه کیک میشود و پیغام پاک میشه در غیر این صورت فقط پیغام پاک میشود
 
 🔓!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
 باز کردن قفل امکانات بالا
-*rtl: Delete msg if Right To Left Char. is in name*
-*strict: disable strict settings enforcement (violating user will not be kicked)*
-
+♻♻♻♻♻♻♻♻
 🔒!mute [all|audio|gifs|photo|video]
 پاک کردن سریع همه پیغام ها-عکس ها-گیف ها-صدا های ضبط شده-فیلم
 🔓!unmute [all|audio|gifs|photo|video]
 باز کردن قفل امکانات بالا
+♻♻♻♻♻♻♻♻
 
 🔧!setflood [value]
 گذاشتن value به عنوان حساسیت اسپم
 
 🚨!settings
 نمایش تنظیمات گروه
-
+🔹🔹🔹🔹🔹🔹🔹
 🔒!addword {text}
 ممنوع کردن کلمه در سوپر گروه
-
 🔓!remword {text}
 ازاد کردن کلمه ممنوعه
-
 🔐!badwords
 لیست کلمات ممنوع شده
-
+🔸🔸🔸🔸🔸🔸🔸
 ♨!muteslist
 نمایش نوع پیغام های سایلنت شده
 
