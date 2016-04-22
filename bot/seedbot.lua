@@ -628,7 +628,7 @@ will return group ban list
 🔎!aparat {text}
 جستجوی در اپارات
 
-💐!azan {text}
+💐اذان {text}
 اذان استان مورد نظر
 
 🌉!weather {text}
