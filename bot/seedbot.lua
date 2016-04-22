@@ -500,14 +500,12 @@ will return group ban list
 
 🔘!id
 نمایش ایدی گروه
-*For userID's: !id @username or reply !id*
 
 🔘!id from
 نمایش اطلاعات فردی که پیغام رو فوارد کرده
 
 🔷!kickme
 کیک شدن از سوپر گروه
-*Must be unblocked by owner or use join by pm to return*
 
 🔧!setowner
 ست کردن کاربر به عنوان خریدار گروه
@@ -557,7 +555,6 @@ will return group ban list
 ⬛!qr {text} [Color]
 تبدیل لینک به عکس
 🔒!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-
 قفل کردن لینک گروها-اسپم-متن و اسم های بزرگ -زبان فارسی-تعداد اعضا-کاراکتر های غیر عادی-استیکر-مخاطبین
 دقت کنید اگر گذینه اخری strict روشن باشد کاربر از گروه کیک میشود و پیغام پاک میشه در غیر این صورت فقط پیغام پاک میشود
 
@@ -568,7 +565,6 @@ will return group ban list
 
 🔒!mute [all|audio|gifs|photo|video]
 پاک کردن سریع همه پیغام ها-عکس ها-گیف ها-صدا های ضبط شده-فیلم
-
 🔓!unmute [all|audio|gifs|photo|video]
 باز کردن قفل امکانات بالا
 
@@ -589,7 +585,6 @@ will return group ban list
 
 ♨!muteslist
 نمایش نوع پیغام های سایلنت شده
-*A "muted" message type is auto-deleted if posted
 
 🔏!muteuser [username]
 سایلنت کردن یک کاربر خاص در گروه
@@ -669,7 +664,6 @@ will return group ban list
 فقط خریدار گروه میتواند دستورات بالا را اجرا کنند
 channel king :@kingbotpluss
 sudo kings :@mehdisudo and @mohammad20162015
-version king bot : 3
 
 ]],
   }
