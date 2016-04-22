@@ -638,7 +638,6 @@ will return group ban list
 !log
 برگرداندن تاریخچه گروه در یک فایل متنی
 
-
 **You can use "#", "!", or "/" to begin all commands
 شما میتوانید هم از اسلش/مربع/علامت تعجب در اول دستورات استفاده کنید
 *Only owner can add members to SuperGroup
