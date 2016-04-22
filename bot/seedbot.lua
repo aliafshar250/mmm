@@ -474,179 +474,179 @@ will return group ban list
 	help_text_super =[[
 ĶÌÑĢ BÒŤ SuperGroup Commands:
 
-!info
+🔎!info
 نمایش اطلاعات اصلی گروه
 
-!info 
+🔍!info 
 نمایش اطلاعات شما
 
-!admins
+♻!admins
 نمایش لیست ادمین های گروه
 
-!owner
+💮!owner
 نمایش خریدار گروه
 
-!modlist
+🔱!modlist
 نمایش لیست ناظم ها
 
-!bots
+💀!bots
 لیست روبات های گروه
 
-!who
+📃!who
 لیست اعضای گروه در یک فایل متنی
 
-!block
+🆗!block
 بلاک کردن و کیک کردن فرد
 
-!id
+🔘!id
 نمایش ایدی گروه
 *For userID's: !id @username or reply !id*
 
-!id from
+🔘!id from
 نمایش اطلاعات فردی که پیغام رو فوارد کرده
 
-!kickme
+🔷!kickme
 کیک شدن از سوپر گروه
 *Must be unblocked by owner or use join by pm to return*
 
-!setowner
+🔧!setowner
 ست کردن کاربر به عنوان خریدار گروه
 
-!promote [username|id]
+🔧!promote [username|id]
 اضافه کردن کاربر به لیست ناظم ها
 
-!demote [username|id]
+🔧!demote [username|id]
 پاک کردن کاربر از لیست ناظم ها
 
-!setname
+🔧!setname
 گذاشتن اسم گروه
 
-!setphoto
+🔧!setphoto
 گذاشتن عکس برای گروه
 
-!setrules
+🔧!setrules
 گذاشتن قوانین برای گروه
 
-!setabout
+🔧!setabout
 گذاشتن متن درباره برای سوپر گروه(این متن در بخش توضیحات گروه هم نمایش داده میشه)
 
-!save [value] <text>
+🆗!save [value] <text>
 ذخیره کردن یک متن
 
-!get [value]
+🔯!get [value]
 گرفتن متن
 
-!newlink
+♻!newlink
 ساختن لینک جدید
 
-!link
+🌟!link
 گرفتن لینک
 
-linkpv
+⭐linkpv
 لینک در شخصی
 
-!links {texr}
+🔴!links {texr}
 کوتاه کردن لینک
 
-!rules
+❎!rules
 نمایش قوانین
 
-!google {text}
+🔖!google {text}
 سرچ کردن در گوگل
 
-!qr {text} [Color]
+⬛!qr {text} [Color]
 تبدیل لینک به عکس
-!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+🔒!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
 
 قفل کردن لینک گروها-اسپم-متن و اسم های بزرگ -زبان فارسی-تعداد اعضا-کاراکتر های غیر عادی-استیکر-مخاطبین
 دقت کنید اگر گذینه اخری strict روشن باشد کاربر از گروه کیک میشود و پیغام پاک میشه در غیر این صورت فقط پیغام پاک میشود
 
-!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+🔓!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
 باز کردن قفل امکانات بالا
 *rtl: Delete msg if Right To Left Char. is in name*
 *strict: disable strict settings enforcement (violating user will not be kicked)*
 
-!mute [all|audio|gifs|photo|video]
+🔒!mute [all|audio|gifs|photo|video]
 پاک کردن سریع همه پیغام ها-عکس ها-گیف ها-صدا های ضبط شده-فیلم
 
-!unmute [all|audio|gifs|photo|video]
+🔓!unmute [all|audio|gifs|photo|video]
 باز کردن قفل امکانات بالا
 
-!setflood [value]
+🔧!setflood [value]
 گذاشتن value به عنوان حساسیت اسپم
 
-!settings
+🚨!settings
 نمایش تنظیمات گروه
 
-!muteslist
+♨!muteslist
 نمایش نوع پیغام های سایلنت شده
 *A "muted" message type is auto-deleted if posted
 
-!muteuser [username]
+🔏!muteuser [username]
 سایلنت کردن یک کاربر خاص در گروه
 فقط خریدار میتونه کسیو سایلنت کنه ولی ناظم ها میتونند فرد را از سایلنتی در بیاورند
 
-!mutelist
+🔛!mutelist
 نمایش لیست افراد سایلنت شده
 
-!clean [rules|about|modlist|mutelist]
+🚫!clean [rules|about|modlist|mutelist]
 پاک کردن لیست ناظم ها-درباره-لیست سایلنت شده ها-قوانین
 
-!public [yes|no]
+✴!public [yes|no]
 نمایش گروه شما در لیست گروها
 
-!res [username]
+💡!res [username]
 گرفتن اطلاعت یوزر نیم داده شد
 
-!log
+🔥!log
 برگرداندن تاریخچه گروه در یک فایل متنی
 
-زمان {State}
+⏰زمان {State}
 نمایش زمان استان مورد نظر
 
-تبدیل {text}
+💫تبدیل {text}
 تبدیل متن به عکس
 
-!gif 
+❇!gif 
 دریافت گیف
 
-!wikifa {text}
+❔!wikifa {text}
 جستجو در باره چیزی در دانشنامه
 
-!git {name gits}
+🔎!git {name gits}
 جستجوی گیت مورد نظر
 
-!aparat {text}
+🔎!aparat {text}
 جستجوی در اپارات
 
-!azan {text}
+💐!azan {text}
 اذان استان مورد نظر
 
-!weather {text}
+🌉!weather {text}
 نمایش اب و هوای استان مورد نظر
 
-!insta {text}
+➿!insta {text}
 جستجو در  اینستاگرام
 
-!mstick {photo}
+☺!mstick {photo}
 تبدیل عکس به استیکر
 
-!mphoto {sticker}
+☺!mphoto {sticker}
 تبدیل استیکر به عکس
 
-!tr en and fa {text}
+🆗!tr en and fa {text}
 ترجمه از انگلیسی en به فارسی fa و بر عکس
 
-بگو {text}
+⭕بگو {text}
 تکرار حرف شما
 
-!voice {text}
+🔊!voice {text}
 تلفظ و خواندن روی کلمه انگلیسی
 
-ممه &کون 
+😍ممه &کون 
 دریافت عکس های +18
 
-!user 
+👤!user 
 دریافت عکس و لینک پیوی خودتان
 
 **You can use "#", "!", or "/" to begin all commands
