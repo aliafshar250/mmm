@@ -1,5 +1,5 @@
 local function run(msg, matches)
-	if matches[1]:lower() == 'aparat' then
+	if matches[1]:lower() == 'اپارات' then
 		local url = http.request('http://www.aparat.com/etc/api/videoBySearch/text/'..URL.escape(matches[2]))
 		local jdat = json:decode(url)
 
@@ -14,7 +14,7 @@ end
 
 return {
    patterns = {
-"^!aparat (.*)$",
+"^(اپارات) (.*)$",
    },
    run = run
 }
