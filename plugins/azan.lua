@@ -55,7 +55,7 @@ function run(msg, matches)
 	local receiver	= get_receiver(msg)
 	local city = matches[1]
 	if matches[1] == 'اذان' then
-	city = 'tehran'
+	city = 'تهران'
 	end
 	local lat,lng,url	= get_staticmap(city)
 	local dumptime = run_bash('date +%s')
@@ -63,13 +63,13 @@ function run(msg, matches)
 	local jdat = json:decode(code)
 	local data = jdat.data.timings
 	local text = 'شهر: '..city
-	  text = text..'\n\n🌞اذان صبح: '..data.Fajr
-	  text = text..'\n\n🌄طلوع آفتاب: '..data.Sunrise
-	  text = text..'\n\n🌝اذان ظهر: '..data.Dhuhr
-	  text = text..'\n\n🌇غروب آفتاب: '..data.Sunset
-	  text = text..'\n\n🌉اذان مغرب: '..data.Maghrib
-	  text = text..'\n\n🌕عشاء : '..data.Isha
-	  text = texr..'\n\n☺ایدی شما : '..(msg.id or '')..'\n'
+	  text = text..'\n\nاذان صبح: '..data.Fajr
+	  text = text..'\n\nطلوع آفتاب: '..data.Sunrise
+	  text = text..'\n\nاذان ظهر: '..data.Dhuhr
+	  text = text..'\n\nغروب آفتاب: '..data.Sunset
+	  text = text..'\n\nاذان مغرب: '..data.Maghrib
+	  text = text..'\n\nعشاء : '..data.Isha
+	  text = texr..'\n\nایدی شما : '..(msg.id or '')..'\n'
 	if string.match(text, '0') then text = string.gsub(text, '0', '۰') end
 	if string.match(text, '1') then text = string.gsub(text, '1', '۱') end
 	if string.match(text, '2') then text = string.gsub(text, '2', '۲') end
