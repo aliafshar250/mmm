@@ -472,182 +472,145 @@ will return group ban list
 
 ]],
 	help_text_super =[[
-ĶÌÑĢ BÒŤ SuperGroup Commands:
+SuperGroup Commands:
 
-🔎!info
-نمایش اطلاعات اصلی گروه
+!info
+Displays general info about the SuperGroup
 
-🔍!info 
-نمایش اطلاعات شما
+!admins
+Returns SuperGroup admins list
 
-♻!admins
-نمایش لیست ادمین های گروه
+!owner
+Returns group owner
 
-💮!owner
-نمایش خریدار گروه
+!modlist
+Returns Moderators list
 
-🔱!modlist
-نمایش لیست ناظم ها
+!bots
+Lists bots in SuperGroup
 
-💀!bots
-لیست روبات های گروه
+!who
+Lists all users in SuperGroup
 
-📃!who
-لیست اعضای گروه در یک فایل متنی
+!block
+Kicks a user from SuperGroup
+*Adds user to blocked list*
 
-🆗!block
-بلاک کردن و کیک کردن فرد
+!ban
+Bans user from the SuperGroup
 
-🔘!id
-نمایش ایدی گروه
+!unban
+Unbans user from the SuperGroup
 
-🔘!id from
-نمایش اطلاعات فردی که پیغام رو فوارد کرده
+!id
+Return SuperGroup ID or user id
+*For userID's: !id @username or reply !id*
 
-🔷!kickme
-کیک شدن از سوپر گروه
+!id from
+Get ID of user message is forwarded from
 
-🔧!setowner
-ست کردن کاربر به عنوان خریدار گروه
-⛎⛎⛎⛎⛎⛎⛎⛎⛎⛎⛎
-🔧!promote [username|id]
-اضافه کردن کاربر به لیست ناظم ها
-🔧!demote [username|id]
-پاک کردن کاربر از لیست ناظم ها
-⛎⛎⛎⛎⛎⛎⛎⛎⛎⛎⛎⛎
-💲💲💲💲💲💲💲💲💲💲💲💲
-🔧!setname
-گذاشتن اسم گروه
-🔧!setphoto
-گذاشتن عکس برای گروه
-🔧!setrules
-گذاشتن قوانین برای گروه
-🔧!setabout
-گذاشتن متن درباره برای سوپر گروه(این متن در بخش توضیحات گروه هم نمایش داده میشه)
-💲💲💲💲💲💲💲💲💲💲💲💲
-🆗!save [value] <text>
-ذخیره کردن یک متن
+!kickme
+Kicks user from SuperGroup
+*Must be unblocked by owner or use join by pm to return*
 
-🔯!get [value]
-گرفتن متن
+!setowner
+Sets the SuperGroup owner
 
-♻!newlink
-ساختن لینک جدید
+!promote [username|id]
+Promote a SuperGroup moderator
 
-🌟!link
-گرفتن لینک
+!demote [username|id]
+Demote a SuperGroup moderator
 
-⭐linkpv
-لینک در شخصی
+!setname
+Sets the chat name
 
-🔴!links {texr}
-کوتاه کردن لینک
+!setphoto
+Sets the chat photo
 
-❎!rules
-نمایش قوانین
+!setrules
+Sets the chat rules
 
-🔖!google {text}
-سرچ کردن در گوگل
+!setabout
+Sets the about section in chat info(members list)
 
-⬛!qr {text} [Color]
-تبدیل لینک به عکس
-🔒!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-قفل کردن لینک گروها-اسپم-متن و اسم های بزرگ -زبان فارسی-تعداد اعضا-کاراکتر های غیر عادی-استیکر-مخاطبین
-دقت کنید اگر گذینه اخری strict روشن باشد کاربر از گروه کیک میشود و پیغام پاک میشه در غیر این صورت فقط پیغام پاک میشود
+!save [value] <text>
+Sets extra info for chat
 
-🔓!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-باز کردن قفل امکانات بالا
+!get [value]
+Retrieves extra info for chat by value
 
-🔒!mute [all|audio|gifs|photo|video]
-پاک کردن سریع همه پیغام ها-عکس ها-گیف ها-صدا های ضبط شده-فیلم
-🔓!unmute [all|audio|gifs|photo|video]
-باز کردن قفل امکانات بالا
+!newlink
+Generates a new group link
 
-🔧!setflood [value]
-گذاشتن value به عنوان حساسیت اسپم
+!link
+Retireives the group link
 
-🚨!settings
-نمایش تنظیمات گروه
-❌❌❌❌❌❌❌❌❌❌❌❌
-🔒!addword {text}
-ممنوع کردن کلمه در سوپر گروه
-🔓!remword {text}
-ازاد کردن کلمه ممنوعه
-🔐!badwords
-لیست کلمات ممنوع شده
-🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫🚫
-♨!muteslist
-نمایش نوع پیغام های سایلنت شده
+!rules
+Retrieves the chat rules
 
-🔏!muteuser [username]
-سایلنت کردن یک کاربر خاص در گروه
-فقط خریدار میتونه کسیو سایلنت کنه ولی ناظم ها میتونند فرد را از سایلنتی در بیاورند
+!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+Lock group settings
+*rtl: Delete msg if Right To Left Char. is in name*
+*strict: enable strict settings enforcement (violating user will be kicked)*
 
-🔛!mutelist
-نمایش لیست افراد سایلنت شده
+!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
+Unlock group settings
+*rtl: Delete msg if Right To Left Char. is in name*
+*strict: disable strict settings enforcement (violating user will not be kicked)*
 
-🚫!clean [rules|about|modlist|mutelist]
-پاک کردن لیست ناظم ها-درباره-لیست سایلنت شده ها-قوانین
+!mute [all|audio|gifs|photo|video|service]
+mute group message types
+*A "muted" message type is auto-deleted if posted
 
-✴!public [yes|no]
-نمایش گروه شما در لیست گروها
+!unmute [all|audio|gifs|photo|video|service]
+Unmute group message types
+*A "unmuted" message type is not auto-deleted if posted
 
-💡!res [username]
-گرفتن اطلاعت یوزر نیم داده شد
+!setflood [value]
+Set [value] as flood sensitivity
 
-🔥!log
-برگرداندن تاریخچه گروه در یک فایل متنی
-♈♈♈♈♈♈♈♈♈♈♈♈
-⏰زمان {State}
-نمایش زمان استان مورد نظر
-💫تبدیل {text}
-تبدیل متن به عکس
-❇!gif 
-دریافت گیف
-❔!wikifa {text}
-جستجو در باره چیزی در دانشنامه
-🔎!git {name gits}
-جستجوی گیت مورد نظر
-🔎اپارات {text}
-جستجوی در اپارات
-💐اذان {text}
-اذان استان مورد نظر
-🌉!weather {text}
-نمایش اب و هوای استان مورد نظر
-➿!insta {text}
-جستجو در اینستاگرام
-🔊!voice {text} 
-تلفظ کلمه انگلیسی
-🃏!mstick
-تبدیل عکس به استیکر
-🀄️!mphoto 
-تبدیل استیکر به عکس.
-♨️!user 
-دریافت یوزر و عکس خود
-🌎!google {text}
-سرچ کردن در گوگل
-🌐!tr en/fa {text}
-ترجمه متن یا کلمه از فارسی به انگلیسیenو از انگلیسی به فارسی fa
-💲!btc 
-دریافت قیمت ازر و دلار
-➰بگو {text}
-تکرار کلمه
-😋ممه /کون
-ارسال عکس +18
-♈️♈️♈️♈️♈️♈️♈️♈️♈️♈️♈️♈️
+!settings
+Returns chat settings
+
+!muteslist
+Returns mutes for chat
+
+!muteuser [username]
+Mute a user in chat
+*If a muted user posts a message, the message is deleted automaically
+*only owners can mute | mods and owners can unmute
+
+!mutelist
+Returns list of muted users in chat
+
+!banlist
+Returns SuperGroup ban list
+
+!clean [rules|about|modlist|mutelist]
+
+!del
+Deletes a message by reply
+
+!public [yes|no]
+Set chat visibility in pm !chats or !chatlist commands
+
+!res [username]
+Returns users name and id by username
+
+
 !log
-برگرداندن تاریخچه گروه در یک فایل متنی
+Returns group logs
+*Search for kick reasons using [#RTL|#spam|#lockmember]
 
 **You can use "#", "!", or "/" to begin all commands
-شما میتوانید هم از اسلش/مربع/علامت تعجب در اول دستورات استفاده کنید
+
 *Only owner can add members to SuperGroup
 (use invite link to invite)
-فقط ادمین ها میتونن اعضا به گروه ادد کنند در سوپر گروه(قانون تلگرام)
+
 *Only moderators and owner can use block, ban, unban, newlink, link, setphoto, setname, lock, unlock, setrules, setabout and settings commands
-فقط ناظم ها و خریدار ها میتوانند دستورات  بالا را اجرا کنند
+
 *Only owner can use res, setowner, promote, demote, and log commands
-فقط خریدار گروه میتواند دستورات بالا رو اجرا کند
-channel king : @kingbotpluss
 
 ]],
   }
