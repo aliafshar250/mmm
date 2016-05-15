@@ -584,7 +584,7 @@ end
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "SuperGroup settings:\nLock links : "..settings.lock_link.."\nLock tag : "..settings.lock_tag.."\nLock flood: "..settings.flood.."\nFlood sensitivity : "..NUM_MSG_MAX.."\nLock spam: "..settings.lock_spam.."\nLock Arabic: "..settings.lock_english.."\nLock English: "..settings.lock_arabic.."\nLock Member: "..settings.lock_member.."\nLock RTL: "..settings.lock_fosh.."\nLock Fosh: "..settings.lock_rtl.."\nLock Tgservice : "..settings.lock_tgservice.."\nLock sticker: "..settings.lock_sticker.."\nPublic: "..settings.public.."\nStrict settings: "..settings.strict
+  local text = "SuperGroup settings:\n✔\nLock links : "..settings.lock_link.."\n✔\nLock tag : "..settings.lock_tag.."\n✔\nLock flood: "..settings.flood.."\n✔\nFlood sensitivity : "..NUM_MSG_MAX.."\n✔\nLock spam: "..settings.lock_spam.."\n✔\nLock Arabic: "..settings.lock_arabic.."\n✔\nLock Member: "..settings.lock_member.."\n✔\nLock RTL : "..settings.lock_rtl.."\n✔\nLock Tgservice : "..settings.lock_tgservice.."\n✔\nLock sticker: "..settings.lock_sticker.."\n♻\nPublic: "..settings.public.."\n❎\nStrict settings: "..settings.strict
   return text
 end
 
